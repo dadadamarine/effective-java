@@ -1,5 +1,9 @@
 package chapter2.builder;
 
+import chapter2.staticfactorymethod.Singleton;
+
+import java.util.Objects;
+
 public class NutritionFacts {
 
     private final int servingSize;
@@ -9,11 +13,11 @@ public class NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
+
     public static class NutritionFactsBuilder{
         //외부 패키지에서 사용 가능하도록, 클래스 접근제어자는 default와 public중 public으로 하였음.
         private final int servingSize;
         private final int servings;
-
         private int calories;
         private int fat;
         private int sodium;
@@ -22,6 +26,7 @@ public class NutritionFacts {
         public NutritionFactsBuilder(int servingSize, int servings){
             this.servingSize = servingSize;
             this.servings = servings;
+            Objects.equals("1","2");
         }
 
         public NutritionFactsBuilder calories(int calories){
